@@ -27,3 +27,365 @@ body {
     /* добавление толщины клавиатуры снизу */
     box-shadow: inset 0 0 8px #bbb, 0 1px 0 #aaa, 0 4px 0 #bbb, 0 10px 30px #ddd;
 }
+
+.keycaps {
+    width: 50px;
+    height: 50px;
+    background: black;
+}
+
+.keyrow {
+    list-style-type: none;
+    width: 784px;
+    margin: 0 auto;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.key {
+    display: block;
+    color: #aaa;
+    font: bold 9pt arial;
+    text-decoration: none;
+    text-align: center;
+    width: 44px;
+    height: 41px;
+    margin: 5px;
+    background: #eff0f2;
+    border-radius: 4px;
+    border-top: 1px solid #f5f5f5;
+    box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9,
+        0 2px 3px #333;
+    text-shadow: 0px 1px 0px #f5f5f5;
+    filter: dropshadow(color=#f5f5f5, offx=0, offy=1);
+}
+
+.key:active,
+.keydown {
+    color: #888;
+    background: #ebeced;
+    margin: 7px 5px 3px;
+    -webkit-box-shadow: inset 0 0 25px #ddd, 0 0 3px #333;
+    -moz-box-shadow: inset 0 0 25px #ddd, 0 0 3px #333;
+    box-shadow: inset 0 0 25px #ddd, 0 0 3px #333;
+    border-top: 1px solid #eee;
+}
+
+#numbers b {
+    display: block;
+    margin: 3px 0 3px 0;
+}
+
+#numbers span {
+    display: block;
+}
+
+#numbers #backspace span {
+    text-align: right;
+    margin: 23px 5px 0 0;
+    font-size: 7.5pt;
+    text-transform: lowercase;
+}
+
+#qwerty span {
+    display: block;
+    margin: 13px 0 0;
+    text-transform: uppercase;
+}
+
+#qwerty .alt b {
+    display: block;
+    margin: 3px 0 0;
+}
+
+#qwerty .alt span {
+    margin: 2px 0 0;
+}
+
+#qwerty #tab span {
+    text-align: left;
+    margin: 23px 0 0 10px;
+    font-size: 7.5pt;
+    text-transform: lowercase;
+}
+
+#qwerty #delete span {
+    text-align: right;
+    margin: 23px 5px 0 0;
+    font-size: 7.5pt;
+    text-transform: lowercase;
+}
+
+
+#asdfg span {
+    display: block;
+    margin: 13px 0 0;
+    text-transform: uppercase;
+}
+
+#asdfg .alt span {
+    margin: 0;
+    text-transform: lowercase;
+}
+
+#asdfg .alt b {
+    display: block;
+    margin: 3px 0 0;
+}
+
+#asdfg #capslock b {
+    display: block;
+    background: #999;
+    width: 4px;
+    height: 4px;
+    border-radius: 10px;
+    margin: 9px 0 0 10px;
+    -webkit-box-shadow: inset 0 1px 0 #666;
+    -moz-box-shadow: inset 0 1px 0 #666;
+    box-shadow: inset 0 1px 0 #666;
+}
+
+#asdfg #capslock span {
+    text-align: left;
+    margin: 10px 0 0 10px;
+    font-size: 7.5pt;
+}
+
+#asdfg #enter span {
+    text-align: right;
+    margin: 23px 10px 0 0;
+    font-size: 7.5pt;
+}
+
+
+#zxcvb span {
+    display: block;
+    margin: 13px 0 0;
+    text-transform: uppercase;
+}
+
+#zxcvb .shiftleft span {
+    text-align: left;
+    margin: 23px 0 0 10px;
+    font-size: 7.5pt;
+    text-transform: lowercase;
+}
+
+#zxcvb .shiftright span {
+    text-align: right;
+    margin: 23px 10px 0 0;
+    font-size: 7.5pt;
+    text-transform: lowercase;
+}
+
+#zxcvb .alt b {
+    display: block;
+    margin: 4px 0 0;
+}
+
+#zxcvb .alt span {
+    margin: 0;
+}
+
+
+#bottomrow #ctrlleft span,
+#bottomrow #command span,
+#bottomrow #altleft span {
+    display: block;
+    text-align: left;
+    margin: 31px 0 0 8px;
+    font-size: 7.5pt;
+    text-transform: lowercase;
+}
+
+#bottomrow #altright span,
+#bottomrow #ctrlright span,
+#bottomrow #command span {
+    display: block;
+    text-align: right;
+    margin: 31px 8px 0 0;
+    font-size: 7.5pt;
+    text-transform: lowercase;
+}
+
+
+#bottomrow #left,
+#bottomrow #right,
+#bottomrow #up,
+#bottomrow #down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#bottomrow #left span,
+#bottomrow #right span,
+#bottomrow #up span,
+#bottomrow #down span {
+    display: block;
+}
+
+#backspace {
+    width: 72px;
+}
+
+#del {
+    width: 72px;
+}
+
+#tab {
+    width: 72px;
+}
+
+#capslock {
+    width: 85px;
+}
+
+#enter {
+    width: 85px;
+}
+
+.shiftleft,
+.shiftright {
+    width: 112px;
+}
+
+#ctrlleft,
+#ctrlright,
+#command,
+#altleft,
+#altright,
+#spacebar {
+    height: 49px;
+}
+
+#ctrl {
+    width: 56px;
+}
+
+.command {
+    width: 67px;
+}
+
+#spacebar {
+    width: 226px;
+}
+
+#down {
+    height: 23px;
+    font-size: 8px;
+}
+
+#up,
+#left,
+#right {
+    height: 24px;
+    font-size: 8px;
+}
+
+#left,
+#right {
+    margin: 30px 5px 5px;
+}
+
+#left:active,
+#right:active {
+    margin: 32px 5px 3px;
+}
+
+#up {
+    margin: 5px 5px 1px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#up:active {
+    margin: 8px 5px -2px;
+}
+
+#down {
+    margin: 0 5px 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+#down:Active {
+    margin: 3px 5px 4px;
+}
+
+
+
+/* шаманю со стрелками */
+#bottomrow {
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 3px;
+}
+
+#bottomrow .key:not(#down) {
+    grid-row: 1 / span 2;
+}
+
+#down {
+    grid-column: 8;
+    grid-row: 2;
+
+}
+
+#up {
+    grid-column: 8;
+}
+
+
+
+/* 
+#paper1, #paper2, #paper3 {
+	display: block;
+	width: 500px;
+	height: 200px;
+	background: #fff;
+	margin: 50px auto 20px;
+	border: 1px solid #fff;
+	padding: 20px;
+	-webkit-box-shadow:
+		inset 0 0 15px #f9f9f9,
+		0 0 5px #e5e5e5;
+	-moz-box-shadow:
+		inset 0 0 15px #f9f9f9,
+		0 0 5px #e5e5e5;
+	box-shadow:
+		inset 0 0 15px #f9f9f9,
+		0 0 5px #e5e5e5;}
+		
+#paper1 {
+	margin: 50px auto 20px;
+	-moz-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+    zoom: 1;}
+		
+#paper2 {
+	margin: -265px auto 0;
+    -moz-transform: rotate(0.5deg);  
+    -webkit-transform: rotate(0.5deg);  
+    -o-transform: rotate(0.5deg);  
+    -ms-transform: rotate(0.5deg);  
+    transform: rotate(0.5deg);  
+    zoom: 1;}
+	
+#paper3 {
+	margin: -240px auto 100px;
+    -moz-transform: rotate(-1.5deg);  
+    -webkit-transform: rotate(-1.5deg);  
+    -o-transform: rotate(-1.5deg);  
+    -me-transform: rotate(-1.5deg);  
+    transform: rotate(-1.5deg);  
+    zoom: 1;}
+#paper3:focus {outline: none;}	 */
