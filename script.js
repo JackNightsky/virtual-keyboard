@@ -1,5 +1,13 @@
 const body = document.querySelector("body")
 
+// создание формы для ввода текста
+const form = document.createElement("form");
+
+const textarea = document.createElement("textarea");
+textarea.id ="monitor";
+body.append(textarea);
+
+
 // создание тела клавиатуры
 let keyboard = document.createElement("div");
 keyboard.id = "keyboard";
