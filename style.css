@@ -263,8 +263,11 @@ body {
     height: 49px;
 }
 
-#ctrl {
-    width: 56px;
+#ctrlleft,
+#ctrlright,
+#altleft,
+#altright {
+    width: 63px;
 }
 
 .command {
@@ -272,7 +275,7 @@ body {
 }
 
 #spacebar {
-    width: 226px;
+    width: 240px;
 }
 
 #down {
