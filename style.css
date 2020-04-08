@@ -276,6 +276,7 @@ body {
 
 #spacebar {
     width: 240px;
+    font-size: 0;
 }
 
 #down {

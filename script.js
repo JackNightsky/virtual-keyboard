@@ -3,9 +3,10 @@ const body = document.querySelector("body")
 // создание формы для ввода текста
 const form = document.createElement("form");
 
-const textarea = document.createElement("textarea");
-textarea.id ="monitor";
-body.append(textarea);
+const monitor = document.createElement("textarea");
+monitor.id ="monitor";
+monitor.classList.add("input-from-keyboard")
+body.append(monitor);
 
 
 // создание тела клавиатуры
@@ -45,7 +46,7 @@ const keyboardEnLayout = [
     ["Tab", 113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 91, 93, 92, "delete"],
     ["Caps Lock", 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, "Enter"],
     ["Shift", 122, 120, 99, 118, 98, 110, 109, 44, 46, 47, "Shift"],
-    ["Ctrl", "command", "Alt", "    ", "Alt", "Ctrl", "<span>&#x25C0;</span>",  "&#x25B2;", "&#x25BC;", "&#x25B6;"]
+    ["Ctrl", "command", "Alt", "32", "Alt", "Ctrl", "<span>&#x25C0;</span>",  "&#x25B2;", "&#x25BC;", "&#x25B6;"]
 ];
 
 const keyboardROWS = ["numbers",
@@ -73,11 +74,20 @@ for (let y = 0; y < 5; y++) {
         keycaps.innerHTML = `${keyboardEnLayoutShift[y][i]} <span> ${typeof keyboardEnLayout[y][i] === "number" 
                                     ? String.fromCharCode(keyboardEnLayout[y][i]) 
                                     : keyboardEnLayout[y][i]} </span>` ;
+        keycaps.setAttribute("data", ""+keyboardEnLayout[y][i]);
         keycaps.classList.add("key");
     }
 }
 
-document.onkeypress = function (event) {
-    keyboardEnLayout.push(event.charCode);
-    console.log(event.code);
-}
+document.querySelectorAll(`#keyboard .keycaps`).forEach((el)=> {
+    el.onmousedown = function (event) {
+        let code = this.getAttribute("data");
+
+        //This is it!
+        document.querySelector(".input-from-keyboard").innerHTML +=  String.fromCharCode(code);
+
+
+        console.log(code);
+        console.log(String.fromCharCode( code));
+    }
+});
