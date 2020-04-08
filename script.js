@@ -86,8 +86,5 @@ document.querySelectorAll(`#keyboard .keycaps`).forEach((el)=> {
         //This is it!
         document.querySelector(".input-from-keyboard").innerHTML +=  String.fromCharCode(code);
 
-
-        console.log(code);
-        console.log(String.fromCharCode( code));
     }
 });
