@@ -79,6 +79,18 @@ for (let y = 0; y < 5; y++) {
     }
 }
 
+document.onkeypress = () => {
+    document.querySelector(`#keyboard .keycaps[data="${event.keyCode}"]`)
+            .classList.add("keydown");
+}
+
+document.onkeyup = () => {
+  document.querySelectorAll(`#keyboard .keycaps`)
+          .forEach((el)=>el.classList.remove("keydown"));
+}
+
+
+
 document.querySelectorAll(`#keyboard .keycaps`).forEach((el)=> {
     el.onmousedown = function (event) {
         let code = this.getAttribute("data");
